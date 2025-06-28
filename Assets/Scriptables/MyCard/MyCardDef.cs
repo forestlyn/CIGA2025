@@ -1,0 +1,73 @@
+using CardHouse;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.LightTransport;
+
+public enum MyCardDefType
+{
+    None,
+    Skill,
+    Prop,
+    Item
+}
+
+[CreateAssetMenu(menuName = "CIGA/MyCard")]
+public class MyCardDef : CardDefinition
+{
+    public Sprite Sprite;
+    public MyCardDefType CardType;
+    public string CardName;
+    public string CardDescription;
+
+    public Effect Effect;
+    public int UseTimes;
+
+    public List<CurrencyQuantity> listOfCosts;
+}
+
+[Serializable]
+public class Effect
+{
+    public int WorkDelta;
+    public bool AddTirednessDelta;
+    public int TirednessDelta;
+    public int DrawCardCount;
+
+    public int BuffID;
+
+    public Effect(Effect effect)
+    {
+        WorkDelta = effect.WorkDelta;
+        AddTirednessDelta = effect.AddTirednessDelta;
+        TirednessDelta = effect.TirednessDelta;
+        DrawCardCount = effect.DrawCardCount;
+        BuffID = effect.BuffID;
+    }
+
+    public void PlayEffect()
+    {
+        if (WorkDelta != 0)
+        {
+            GameManger.Instance.AddWork(WorkDelta);
+        }
+        if (TirednessDelta != 0)
+        {
+            int flag = AddTirednessDelta ? -1 : 1;
+            PlayerManager.Instance.ChangePlayerTiredness(flag * TirednessDelta);
+        }
+        if (DrawCardCount > 0)
+        {
+            GameManger.Instance.DrawCard(DrawCardCount);
+        }
+        if (BuffID != -1)
+        {
+            Buff buff = BuffManager.Instance.GetBuff(BuffID);
+            if (buff != null)
+            {
+                BuffManager.Instance.AddBuff(buff);
+            }
+        }
+    }
+
+}

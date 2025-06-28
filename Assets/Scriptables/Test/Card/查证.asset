@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 084d49038ec908c4bbbe1ec1c4341e7d, type: 3}
+  m_Name: "\u67E5\u8BC1"
+  m_EditorClassIdentifier: 
+  BackArt: {fileID: -5044639396517056953, guid: 778de25b060aa194db2020006ad9a649, type: 3}
+  Sprite: {fileID: 3487946767314035485, guid: 121d2f1759f083f47ae4c213a6391273, type: 3}
+  CardType: 1
+  CardName: "\u67E5\u8BC1"
+  listOfCosts:
+  - CurrencyType: {fileID: 11400000, guid: 2ef66761be77b084d89e4a1d9d640fd2, type: 2}
+    Amount: -1
+  - CurrencyType: {fileID: 11400000, guid: a03c5ca382de19c4ab6f8eba06159c53, type: 2}
+    Amount: 1
+  - CurrencyType: {fileID: 11400000, guid: c65682c5883d32c4a9cb723c040ca946, type: 2}
+    Amount: 4
