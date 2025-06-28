@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-internal class ItemManager
+internal class ItemManager : MonoBehaviour
 {
     private static ItemManager _instance;
     public static ItemManager Instance
@@ -20,13 +20,22 @@ internal class ItemManager
             return _instance;
         }
     }
-    private ItemManager()
-    {
-        _instance = this;
-    }
 
-    Dictionary<int,GameObject> itemPrefabs = new Dictionary<int, GameObject>();
-    List<Item> itemList = new List<Item>();
+    [SerializeField]
+    private List<Item> itemList = new List<Item>();
+
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void Init()
     {
@@ -36,6 +45,25 @@ internal class ItemManager
     public bool HasRoom()
     {
         return itemList.Count < GameManger.Instance.MaxItemCount;
+    }
+
+    internal Item GetItem(int itemID)
+    {
+        return null;
+    }
+
+    internal void AddItem(Item item)
+    {
+        if (HasRoom())
+        {
+            itemList.Add(item);
+            item.gameObject.SetActive(true);
+            item.Active();
+        }
+        else
+        {
+            Debug.LogWarning("No room for more items.");
+        }
     }
 }
 

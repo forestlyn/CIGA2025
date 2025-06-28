@@ -7,6 +7,15 @@ using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.VFX;
 
+public class EventDiscardCardArgs : EventArgs
+{
+    public int Count { get; private set; }
+    public EventDiscardCardArgs(int count)
+    {
+        Count = count;
+    }
+}
+
 internal class GameManger : MonoBehaviour
 {
     private static GameManger _instance;
@@ -87,6 +96,7 @@ internal class GameManger : MonoBehaviour
         _buffManager.Init();
         _toolManager.Init();
         _roundManager.StartNewRound();
+
     }
 
     public StateType StateType
@@ -95,6 +105,7 @@ internal class GameManger : MonoBehaviour
     }
 
     public MyEvent WorkChangeEvent = MyEvent.CreateEvent((int)EventTypeEnum.WorkChange);
+    public MyEvent DiscardCardEvent = MyEvent.CreateEvent((int)EventTypeEnum.DiacardCardEvent);
     private int work;
     public int Work
     {
@@ -176,10 +187,12 @@ internal class GameManger : MonoBehaviour
 
     public void ClearCardHand()
     {
+        int cardCount = CardHand.MountedCards.Count;
         foreach (var target in CardHand.MountedCards.ToArray())
         {
             CardDiacrd.Mount(target, invokeEvent: false);
         }
+        DiscardCardEvent.Invoke(this, new EventDiscardCardArgs(cardCount));
     }
 
     internal void RemoveCard(Card card)

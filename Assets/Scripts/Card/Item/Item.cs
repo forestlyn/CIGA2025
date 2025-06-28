@@ -5,7 +5,7 @@ using UnityEngine;
 
 public abstract class Item : MonoBehaviour
 {
-    public PlayerCard playerCard;
+    public int ItemID;
 
     public abstract void Active();
 

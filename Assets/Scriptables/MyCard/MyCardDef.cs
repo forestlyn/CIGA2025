@@ -22,7 +22,6 @@ public class MyCardDef : CardDefinition
 
     public Effect Effect;
     public int UseTimes;
-
     public List<CurrencyQuantity> listOfCosts;
 }
 
@@ -35,7 +34,7 @@ public class Effect
     public int DrawCardCount;
 
     public int BuffID;
-
+    public int ItemID;
     public Effect(Effect effect)
     {
         WorkDelta = effect.WorkDelta;
@@ -43,6 +42,7 @@ public class Effect
         TirednessDelta = effect.TirednessDelta;
         DrawCardCount = effect.DrawCardCount;
         BuffID = effect.BuffID;
+        ItemID = effect.ItemID;
     }
 
     public void PlayEffect()
@@ -66,6 +66,14 @@ public class Effect
             if (buff != null)
             {
                 BuffManager.Instance.AddBuff(buff);
+            }
+        }
+        if (ItemID != -1)
+        {
+            Item item = ItemManager.Instance.GetItem(ItemID);
+            if (item != null)
+            {
+                ItemManager.Instance.AddItem(item);
             }
         }
     }

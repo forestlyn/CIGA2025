@@ -11,5 +11,6 @@
         BuffChange,
         WorkChange,
         PlayCard,
+        DiacardCardEvent,
     }
 }
