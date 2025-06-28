@@ -64,10 +64,11 @@ public class PlayerCard : MonoBehaviour
         if (GameManger.Instance.StateType == Assets.Scripts.StateType.OnPlay)
         {
             MyLog.LogWithTime($"Card play effect. {GameManger.Instance.StateType}");
-            var nowEffect = CalculateMyEffect();
+            var nowCardData = CalculateMyCardData();
             BuffManager.Instance.PlayCard(myCardData);
-            nowEffect.PlayEffect();
-            Debug.Log($"Card {myCardData.CardName} activated with effect: {nowEffect.WorkDelta} Work, {nowEffect.TirednessDelta} Tiredness, Draw {nowEffect.DrawCardCount} Cards, Buff ID: {nowEffect.BuffID}");
+            nowCardData.Effect.PlayEffect();
+            PlayerManager.Instance.PlayCardEvent.Invoke(this, new EventPlayCardArgs(nowCardData));
+            //Debug.Log($"Card {myCardData.CardName} activated with effect: {nowEffect.WorkDelta} Work, {nowEffect.TirednessDelta} Tiredness, Draw {nowEffect.DrawCardCount} Cards, Buff ID: {nowEffect.BuffID}");
         }
     }
 
@@ -75,10 +76,9 @@ public class PlayerCard : MonoBehaviour
     /// 计算当前卡牌在当前buff下的效果
     /// </summary>
     /// <returns></returns>
-    public Effect CalculateMyEffect()
+    public MyCardData CalculateMyCardData()
     {
         var tempData = BuffManager.Instance.CalculateBuff(myCardData);
-        Effect effect = new Effect(tempData.Effect);
-        return effect;
+        return tempData;
     }
 }

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef85fdab70899ef489774c4c7da50df5, type: 3}
   m_Name: "\u732B\u5C4E\u5496\u5561"
   m_EditorClassIdentifier: 
-  BackArt: {fileID: -5044639396517056953, guid: 778de25b060aa194db2020006ad9a649, type: 3}
-  Sprite: {fileID: -5044639396517056953, guid: 778de25b060aa194db2020006ad9a649, type: 3}
+  BackArt: {fileID: -1044200018756765520, guid: 4f51ace72abebd84983b68143b3c60ef, type: 3}
+  Sprite: {fileID: -1044200018756765520, guid: 4f51ace72abebd84983b68143b3c60ef, type: 3}
   CardType: 2
   CardName: "\u732B\u5C4E\u5496\u5561"
   CardDescription: "\u732B\u5C4E\u5496\u5561"
@@ -23,6 +23,7 @@ MonoBehaviour:
     TirednessDelta: 2
     DrawCardCount: 3
     BuffID: -1
+    ItemID: 0
   UseTimes: 0
   listOfCosts:
   - CurrencyType: {fileID: 11400000, guid: 01683e792cc157a4fa4f261f21c82857, type: 2}

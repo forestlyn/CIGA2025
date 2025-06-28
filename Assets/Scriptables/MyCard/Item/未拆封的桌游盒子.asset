@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef85fdab70899ef489774c4c7da50df5, type: 3}
+  m_Name: "\u672A\u62C6\u5C01\u7684\u684C\u6E38\u76D2\u5B50"
+  m_EditorClassIdentifier: 
+  BackArt: {fileID: 2514675149350004814, guid: f40009c5b234e3a41a3c449ec162a5f9, type: 3}
+  Sprite: {fileID: 2514675149350004814, guid: f40009c5b234e3a41a3c449ec162a5f9, type: 3}
+  CardType: 3
+  CardName: "\u672A\u62C6\u5C01\u7684\u684C\u6E38\u76D2\u5B50"
+  CardDescription: "\u672A\u62C6\u5C01\u7684\u684C\u6E38\u76D2\u5B50"
+  Effect:
+    WorkDelta: 0
+    AddTirednessDelta: 0
+    TirednessDelta: 0
+    DrawCardCount: 0
+    BuffID: 0
+    ItemID: 1
+  UseTimes: 0
+  listOfCosts:
+  - CurrencyType: {fileID: 11400000, guid: 01683e792cc157a4fa4f261f21c82857, type: 2}
+    Amount: 10

@@ -78,7 +78,7 @@ public class MyCardSetup : CardSetup
     public SpriteRenderer Image;
     public SpriteRenderer BackImage;
     public TextMeshProUGUI cardProperty;
-    public TextMeshProUGUI description;
+    public TextMeshProUGUI costText;
     public MyCardDefType CardType { get; private set; }
     public string CardName { get; private set; }
 
@@ -108,7 +108,7 @@ public class MyCardSetup : CardSetup
                     });
                 }
             }
-            description.text = myCard.CardDescription;
+            costText.text = myCard.CardDescription;
 
             originDefData = new MyCardData(myCard);
             CardId = CardIdIndex;
@@ -133,8 +133,14 @@ public class MyCardSetup : CardSetup
 
     public void ReDraw(MyCardData myCardData)
     {
-        string text = myCardData.ToString();
-        cardProperty.text = text;
+        foreach (var cost in myCardData.listOfCosts)
+        {
+            if (cost.CurrencyType.Name == "Tired")
+            {
+                string text = cost.Amount.ToString();
+                costText.text = text;
+            }
+        }
     }
 }
 
