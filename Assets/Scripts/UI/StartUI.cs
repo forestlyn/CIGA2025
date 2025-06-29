@@ -26,6 +26,7 @@ public class StartUI : MonoBehaviour
 
     private void OnStartButtonClicked()
     {
+        TransitionManager.Instance.Win = false;
         TransitionManager.Instance.Transition("StartScene", "CiGATestWithUI");
     }
 

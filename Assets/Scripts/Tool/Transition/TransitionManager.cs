@@ -18,6 +18,7 @@ public class TransitionEventArgs : EventArgs
 
 public class TransitionManager : MonoBehaviour
 {
+    public bool Win = false;
     public bool isLoading = false;
     private static TransitionManager instance;
     [SerializeField]

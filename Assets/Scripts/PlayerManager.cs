@@ -45,7 +45,7 @@ internal class PlayerManager
     private int _PlayerTirednessMax;
     public int PlayerTirednessMax
     {
-        get=> _PlayerTirednessMax;
+        get => _PlayerTirednessMax;
         private set
         {
             if (_PlayerTirednessMax != value)
@@ -68,6 +68,11 @@ internal class PlayerManager
                 var previousTiredness = PlayerTiredness;
                 CurrencyRegistry.Instance.AdjustCurrency(PlayerTirednessCurrencyType, PhaseManager.Instance.PlayerIndex, value - PlayerTiredness);
                 TirednessChange.Invoke(this, new EventTirednessChangeArgs(previousTiredness, PlayerTiredness));
+                if (value <= 0)
+                {
+                    TransitionManager.Instance.Win = false;
+                    TransitionManager.Instance.Transition("CiGATestWithUI", "End");
+                }
             }
         }
     }

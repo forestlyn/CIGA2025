@@ -117,6 +117,12 @@ internal class GameManger : MonoBehaviour
             {
                 int previousWork = work;
                 work = Math.Max(value, work);
+                if(work > WorkMax)
+                {
+                    work = WorkMax;
+                    TransitionManager.Instance.Win = true;
+                    TransitionManager.Instance.Transition("CiGATestWithUI", "End");
+                }
                 Debug.Log($"Work changed: {work}");
             }
         }
