@@ -35,6 +35,7 @@ public class PlayerCard : MonoBehaviour
     public void Activate()
     {
         UIManager.Instance.SetDescriptionText(myCardData.CardDescription);
+
         if (myCardData.CardType == MyCardDefType.Skill)
         {
             ActivateEffect();

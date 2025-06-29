@@ -11,5 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CiGATestWithUI.unity
     guid: 28adb31d7a80a824ea760cc0de0b48ca
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: 9840368fbfbac1348879d7451e0d0fe6
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

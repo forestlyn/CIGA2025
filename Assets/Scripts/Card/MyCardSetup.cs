@@ -10,6 +10,7 @@ public class MyCardData
     public MyCardDefType CardType;
     public string CardName;
     public string CardDescription;
+    public string CardFlavorText;
     public Effect Effect;
     public int UseTimes;
     public CurrencyQuantity[] listOfCosts;
@@ -22,6 +23,7 @@ public class MyCardData
         CardType = myCardData.CardType;
         CardName = myCardData.CardName;
         CardDescription = myCardData.CardDescription;
+        CardFlavorText = myCardData.CardFlavorText;
         Effect = new Effect(myCardData.Effect);
         UseTimes = myCardData.UseTimes;
         //foreach (var cost in myCardData.listOfCosts)
@@ -50,6 +52,7 @@ public class MyCardData
         CardType = myCardData.CardType;
         CardName = myCardData.CardName;
         CardDescription = myCardData.CardDescription;
+        CardFlavorText = myCardData.CardFlavorText;
         Effect = new Effect(myCardData.Effect);
         UseTimes = myCardData.UseTimes;
         listOfCosts = new CurrencyQuantity[myCardData.listOfCosts.Count()];

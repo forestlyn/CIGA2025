@@ -14,7 +14,7 @@ public class Tool : MonoBehaviour
     private bool isActive;
     public bool IsActive
     {
-        get => isActive; 
+        get => isActive;
         internal set
         {
             isActive = value;
@@ -63,7 +63,7 @@ public class Tool : MonoBehaviour
     private void OnMouseEnter()
     {
         isFocused = true;
-        string text = playerCard.GetMyCardData().CardName + ":" + playerCard.GetMyCardData().CardDescription;
+        string text = playerCard.GetMyCardData().CardName + ":" + playerCard.GetMyCardData().CardFlavorText + "(" + playerCard.GetMyCardData().CardDescription + ")";
         UIManager.Instance.SetDescriptionText(text);
     }
 

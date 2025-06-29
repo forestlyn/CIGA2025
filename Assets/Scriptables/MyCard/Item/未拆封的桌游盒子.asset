@@ -17,6 +17,7 @@ MonoBehaviour:
   CardType: 3
   CardName: "\u672A\u62C6\u5C01\u7684\u684C\u6E38\u76D2\u5B50"
   CardDescription: "\u6BCF\u4E2A\u56DE\u5408\u7ED3\u675F\u65F6\uFF0C\u589E\u52A05\u5757\u788E\u7247"
+  CardFlavorText: "\u4F60\u60F3\u548C\u8C01\u73A9\u5462\uFF1F"
   Effect:
     WorkDelta: 0
     AddTirednessDelta: 0
@@ -29,4 +30,4 @@ MonoBehaviour:
   UseTimes: 0
   listOfCosts:
   - CurrencyType: {fileID: 11400000, guid: 01683e792cc157a4fa4f261f21c82857, type: 2}
-    Amount: 10
+    Amount: 5

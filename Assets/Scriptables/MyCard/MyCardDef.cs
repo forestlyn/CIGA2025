@@ -18,6 +18,7 @@ public class MyCardDef : CardDefinition
     public MyCardDefType CardType;
     public string CardName;
     public string CardDescription;
+    public string CardFlavorText;
 
     public Effect Effect;
     public int UseTimes;
@@ -78,7 +79,7 @@ public class Effect
             {
                 item.SetActive(true);
                 ItemManager.Instance.AddItem(item.GetComponent<Item>());
-                item.GetComponent<Item>().SetDescriptionText($"{myCardData.CardName}:{myCardData.CardDescription}");
+                item.GetComponent<Item>().SetDescriptionText($"{myCardData.CardName}:{myCardData.CardFlavorText} ({myCardData.CardDescription})");
             }
         }
     }

@@ -117,7 +117,7 @@ internal class GameManger : MonoBehaviour
             {
                 int previousWork = work;
                 work = Math.Max(value, work);
-                if(work > WorkMax)
+                if(work >= WorkMax)
                 {
                     work = WorkMax;
                     TransitionManager.Instance.Win = true;

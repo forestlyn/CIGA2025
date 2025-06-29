@@ -17,6 +17,7 @@ MonoBehaviour:
   CardType: 1
   CardName: "\u966A\u4F34\u5C0F\u732B"
   CardDescription: "\u966A\u4F34\u5C0F\u732B"
+  CardFlavorText: "\u55B5\uFF5E\u55B5\uFF5E/\u6211\u662F\u732B\uFF0C\u5F53\u7136\u53EA\u80FD\u55B5\u4E86"
   Effect:
     WorkDelta: 0
     AddTirednessDelta: 0

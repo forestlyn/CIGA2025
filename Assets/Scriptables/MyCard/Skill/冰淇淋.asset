@@ -17,6 +17,7 @@ MonoBehaviour:
   CardType: 1
   CardName: "\u51B0\u6DC7\u6DCB"
   CardDescription: "\u51B0\u6DC7\u6DCB"
+  CardFlavorText: "\u5C31\u50CF\u4F60\u7834\u788E\u7684\u5FC3"
   Effect:
     WorkDelta: 10
     AddTirednessDelta: 0
@@ -29,4 +30,4 @@ MonoBehaviour:
   UseTimes: 0
   listOfCosts:
   - CurrencyType: {fileID: 11400000, guid: 01683e792cc157a4fa4f261f21c82857, type: 2}
-    Amount: 15
+    Amount: 9
