@@ -63,6 +63,8 @@ public class Tool : MonoBehaviour
     private void OnMouseEnter()
     {
         isFocused = true;
+        string text = playerCard.GetMyCardData().CardName + ":" + playerCard.GetMyCardData().CardDescription;
+        UIManager.Instance.SetDescriptionText(text);
     }
 
     private void OnMouseDown()
@@ -79,6 +81,7 @@ public class Tool : MonoBehaviour
     private void OnMouseExit()
     {
         isFocused = false;
+        UIManager.Instance.SetDescriptionText(string.Empty);
     }
 
 }

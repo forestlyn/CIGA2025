@@ -16,7 +16,7 @@ MonoBehaviour:
   Sprite: {fileID: -1997909288524171354, guid: 2c819bfe0fd12224da97125c96e33b5c, type: 3}
   CardType: 2
   CardName: "\u6811\u8393\u5473\u60C5\u4E66"
-  CardDescription: "\u6811\u8393\u5473\u60C5\u4E66"
+  CardDescription: "\u5F03\u6389\u4F60\u7684\u624B\u724C\uFF0C\u62BD\u53D65\u5F20\u724C"
   Effect:
     WorkDelta: 0
     AddTirednessDelta: 0
@@ -25,6 +25,7 @@ MonoBehaviour:
     BuffID: 2
     ItemID: 0
     ToolID: 1
+    SkillID: 0
   UseTimes: 0
   listOfCosts:
   - CurrencyType: {fileID: 11400000, guid: 01683e792cc157a4fa4f261f21c82857, type: 2}

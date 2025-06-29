@@ -34,6 +34,7 @@ public class PlayerCard : MonoBehaviour
 
     public void Activate()
     {
+        UIManager.Instance.SetDescriptionText(myCardData.CardDescription);
         if (myCardData.CardType == MyCardDefType.Skill)
         {
             ActivateEffect();
@@ -67,7 +68,7 @@ public class PlayerCard : MonoBehaviour
             MyLog.LogWithTime($"Card play effect. {GameManger.Instance.StateType}");
             var nowCardData = CalculateMyCardData();
             BuffManager.Instance.PlayCard(myCardData);
-            nowCardData.Effect.PlayEffect();
+            nowCardData.Effect.PlayEffect(myCardData);
             PlayerManager.Instance.PlayCardEvent.Invoke(this, new EventPlayCardArgs(nowCardData));
             //Debug.Log($"Card {myCardData.CardName} activated with effect: {nowEffect.WorkDelta} Work, {nowEffect.TirednessDelta} Tiredness, Draw {nowEffect.DrawCardCount} Cards, Buff ID: {nowEffect.BuffID}");
         }

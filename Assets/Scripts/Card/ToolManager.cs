@@ -83,6 +83,7 @@ internal class ToolManager : MonoBehaviour
     {
         tools.Remove(tool);
         tool.IsActive = false; 
+        tool.gameObject.SetActive(false);
     }
 
     internal bool HasRoom()

@@ -48,7 +48,7 @@ public class Effect
         SkillID = effect.SkillID;
     }
 
-    public void PlayEffect()
+    public void PlayEffect(MyCardData myCardData)
     {
         if (WorkDelta != 0)
         {
@@ -78,6 +78,7 @@ public class Effect
             {
                 item.SetActive(true);
                 ItemManager.Instance.AddItem(item.GetComponent<Item>());
+                item.GetComponent<Item>().SetDescriptionText($"{myCardData.CardName}:{myCardData.CardDescription}");
             }
         }
     }
