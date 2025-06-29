@@ -2595,6 +2595,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4089340355138755086, guid: 1e6e523677619e9419b53c0efc949a26, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5050174539647028185, guid: 1e6e523677619e9419b53c0efc949a26, type: 3}
       propertyPath: m_SortingOrder
       value: 4
