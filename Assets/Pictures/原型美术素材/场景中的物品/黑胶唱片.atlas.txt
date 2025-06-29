@@ -1,0 +1,23 @@
+黑胶唱片.png
+size:372,615
+filter:Linear,Linear
+pma:true
+图层 3
+bounds:244,2,69,122
+offsets:1,1,72,125
+rotate:90
+图层 4
+bounds:244,73,102,111
+offsets:1,1,104,113
+rotate:90
+图层 7
+bounds:2,37,239,240
+offsets:1,1,241,243
+rotate:90
+图层 8
+bounds:244,177,126,99
+offsets:1,1,128,101
+组 1
+bounds:2,278,335,352
+offsets:1,2,337,355
+rotate:90
