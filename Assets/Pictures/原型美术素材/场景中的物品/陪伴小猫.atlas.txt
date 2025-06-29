@@ -1,0 +1,20 @@
+陪伴小猫.png
+size:388,558
+filter:Linear,Linear
+pma:true
+图层 10
+bounds:2,249,307,384
+offsets:1,1,309,387
+rotate:90
+图层 5
+bounds:2,162,350,85
+offsets:1,1,352,87
+图层 7
+bounds:138,2,158,101
+rotate:90
+图层 8
+bounds:241,41,119,134
+offsets:0,0,120,134
+rotate:90
+图层 9
+bounds:2,2,134,158
