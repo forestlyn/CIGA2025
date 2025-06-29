@@ -107,6 +107,8 @@ internal class GameManger : MonoBehaviour
     public MyEvent WorkChangeEvent = MyEvent.CreateEvent((int)EventTypeEnum.WorkChange);
     public MyEvent DiscardCardEvent = MyEvent.CreateEvent((int)EventTypeEnum.DiacardCardEvent);
     private int work;
+
+    public int WorkMax { get; private set; } = 100;
     public int Work
     {
         get => work;
@@ -115,7 +117,7 @@ internal class GameManger : MonoBehaviour
             if (work != value)
             {
                 int previousWork = work;
-                work = value;
+                work = Math.Max(value, work);
                 Debug.Log($"Work changed: {work}");
                 WorkChangeEvent.Invoke(this, new WorkChangeEventArgs(previousWork, work));
             }

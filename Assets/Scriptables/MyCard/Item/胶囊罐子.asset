@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef85fdab70899ef489774c4c7da50df5, type: 3}
   m_Name: "\u80F6\u56CA\u7F50\u5B50"
   m_EditorClassIdentifier: 
-  BackArt: {fileID: -6936059495459866687, guid: d0a6127f2879f364a9214730a32cd997, type: 3}
-  Sprite: {fileID: -6936059495459866687, guid: d0a6127f2879f364a9214730a32cd997, type: 3}
+  BackArt: {fileID: 6987519897729658085, guid: b5bf0f9023f173745bfa347f19b8ce77, type: 3}
+  Sprite: {fileID: 6987519897729658085, guid: b5bf0f9023f173745bfa347f19b8ce77, type: 3}
   CardType: 3
   CardName: "\u80F6\u56CA\u7F50\u5B50"
   CardDescription: "\u80F6\u56CA\u7F50\u5B50"

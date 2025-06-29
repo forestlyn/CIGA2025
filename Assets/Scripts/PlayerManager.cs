@@ -42,6 +42,20 @@ internal class PlayerManager
         }
     }
     public const string PlayerTirednessCurrencyType = "Tired";
+    private int _PlayerTirednessMax;
+    public int PlayerTirednessMax
+    {
+        get=> _PlayerTirednessMax;
+        private set
+        {
+            if (_PlayerTirednessMax != value)
+            {
+                _PlayerTirednessMax = value;
+                CurrencyRegistry.Instance.PlayerWallets[0].Currencies.Find(c => c.CurrencyType.Name == PlayerTirednessCurrencyType)
+                    .Max = value;
+            }
+        }
+    }
 
     public int PlayerTiredness
     {
@@ -57,7 +71,6 @@ internal class PlayerManager
             }
         }
     }
-    public int PlayerTirednessMax { get; private set; } = 100;
 
     public MyEvent TirednessChange = MyEvent.CreateEvent((int)EventTypeEnum.PlayerTirednessChange);
     public MyEvent PlayCardEvent = MyEvent.CreateEvent((int)EventTypeEnum.PlayCard);
