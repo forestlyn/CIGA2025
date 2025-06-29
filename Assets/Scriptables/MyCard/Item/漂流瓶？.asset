@@ -15,7 +15,7 @@ MonoBehaviour:
   BackArt: {fileID: -6936059495459866687, guid: d0a6127f2879f364a9214730a32cd997, type: 3}
   Sprite: {fileID: -6936059495459866687, guid: d0a6127f2879f364a9214730a32cd997, type: 3}
   CardType: 3
-  CardName: "\u6F02\u6D41\u74F6\uFF1F"
+  CardName: "\u6F02\u6D41\u74F6"
   CardDescription: "\u6BCF\u5F53\u4F60\u4F7F\u7528\u589E\u52A0\u75B2\u52B3\u503C\u4E3A0\u7684\u5361\u724C\u540E\uFF0C\u788E\u7247\u5757\u6570\u589E\u52A05"
   Effect:
     WorkDelta: 0
