@@ -6,10 +6,12 @@ public class EndUI : MonoBehaviour
     public Button startBtn;
     public Button exitBtn;
     public GameObject winAnim;
+    public GameObject loseGO;
 
     private void Start()
     {
         winAnim.SetActive(TransitionManager.Instance.Win);
+        loseGO.SetActive(!TransitionManager.Instance.Win);
         startBtn.onClick.AddListener(OnStartButtonClicked);
         exitBtn.onClick.AddListener(OnExitButtonClicked);
     }
