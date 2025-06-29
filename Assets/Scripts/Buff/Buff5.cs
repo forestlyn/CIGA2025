@@ -15,12 +15,7 @@ internal class Buff5 : Buff
         var newCosts = new List<CurrencyQuantity>();
         foreach (var cost in costs)
         {
-            if (cost.CurrencyType.Name == "Tired")
-                newCosts.Add(new CurrencyQuantity { CurrencyType = cost.CurrencyType, Amount = 0 });
-            else
-            {
-                newCosts.Add(new CurrencyQuantity { CurrencyType = cost.CurrencyType, Amount = cost.Amount });
-            }
+            newCosts.Add(new CurrencyQuantity { CurrencyType = cost.CurrencyType, Amount = 0 });
         }
         return newCosts;
     }
