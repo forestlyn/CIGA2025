@@ -15,6 +15,7 @@ public class MyCardData
     public CurrencyQuantity[] listOfCosts;
     public int CardId;
     internal int ToolID;
+    public int SkillID;
 
     public MyCardData(MyCardDef myCardData)
     {
@@ -41,6 +42,7 @@ public class MyCardData
             Debug.Log(myCardData.listOfCosts.Count);
         }
         ToolID = myCardData.Effect.ToolID;
+        SkillID = myCardData.Effect.SkillID;
     }
 
     public MyCardData(MyCardData myCardData)
@@ -62,6 +64,7 @@ public class MyCardData
         }
         CardId = myCardData.CardId;
         ToolID = myCardData.ToolID;
+        SkillID = myCardData.SkillID;
     }
 
     public override string ToString()

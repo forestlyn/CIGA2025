@@ -37,6 +37,7 @@ public class PlayerCard : MonoBehaviour
         if (myCardData.CardType == MyCardDefType.Skill)
         {
             ActivateEffect();
+            SkillManager.Instance.ActiveSkillGo(myCardData.SkillID);
         }
         else if (myCardData.CardType == MyCardDefType.Prop)
         {
