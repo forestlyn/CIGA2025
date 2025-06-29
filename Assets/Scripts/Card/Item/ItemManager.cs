@@ -67,6 +67,8 @@ internal class ItemManager : MonoBehaviour
             itemList.Add(item);
             item.gameObject.SetActive(true);
             item.Active();
+            if (!HasRoom())
+                UIManager.Instance.ShowThought("...已经思考得太多了", 2f);
         }
         else
         {
