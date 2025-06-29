@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Mathematics;
 
-
+/// <summary>
+/// 使你手中所有牌的疲劳值增加量减少3
+/// </summary>
 internal class Buff6 : Buff
 {
     private List<int> cardIds = new List<int>();
