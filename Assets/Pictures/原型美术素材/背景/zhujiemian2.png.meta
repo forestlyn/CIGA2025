@@ -1,0 +1,481 @@
+fileFormatVersion: 2
+guid: fa67c01c80b3f8b45ba1d1b0331f0e8f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7301850584118223001
+    second: zhujiemian2_0
+  - first:
+      213: -6508979831540526105
+    second: zhujiemian2_1
+  - first:
+      213: 4339354777419525179
+    second: zhujiemian2_2
+  - first:
+      213: 7728638112158866362
+    second: zhujiemian2_3
+  - first:
+      213: -8174927752912899287
+    second: zhujiemian2_4
+  - first:
+      213: 5126460551017297942
+    second: zhujiemian2_5
+  - first:
+      213: 4662587000243960249
+    second: zhujiemian2_6
+  - first:
+      213: -8573937250342349407
+    second: zhujiemian2_7
+  - first:
+      213: 7362684571376395938
+    second: zhujiemian2_8
+  - first:
+      213: -8988400235654338017
+    second: zhujiemian2_9
+  - first:
+      213: -3742777857573247865
+    second: zhujiemian2_10
+  - first:
+      213: 2410355698912830675
+    second: zhujiemian2_11
+  - first:
+      213: 9091778264950423949
+    second: zhujiemian2_12
+  - first:
+      213: 1697566603696801254
+    second: zhujiemian2_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 0
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zhujiemian2_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 1922
+        height: 1131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 990685d5b62655560800000000000000
+      internalID: 7301850584118223001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_1
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 770
+        width: 588
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e358da44557ba5a0800000000000000
+      internalID: -6508979831540526105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_2
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 837
+        width: 501
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3c2c7edd2c783c30800000000000000
+      internalID: 4339354777419525179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_3
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 949
+        width: 44
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abb56c83a63a14b60800000000000000
+      internalID: 7728638112158866362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_4
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 996
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923f4277582dc8e80800000000000000
+      internalID: -8174927752912899287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_5
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 902
+        width: 47
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6187072c5b8d42740800000000000000
+      internalID: 5126460551017297942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_6
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 949
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b935eb5c26d4b040800000000000000
+      internalID: 4662587000243960249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_7
+      rect:
+        serializedVersion: 2
+        x: 3671
+        y: 775
+        width: 155
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5dada5f71430980800000000000000
+      internalID: -8573937250342349407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_8
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 817
+        width: 163
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a6a326cb928d2660800000000000000
+      internalID: 7362684571376395938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_9
+      rect:
+        serializedVersion: 2
+        x: 3177
+        y: 818
+        width: 181
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1a29c6bb99c24380800000000000000
+      internalID: -8988400235654338017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_10
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 817
+        width: 74
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 784262e5e5bfe0cc0800000000000000
+      internalID: -3742777857573247865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_11
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 1
+        width: 1922
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4a900dcbd437120800000000000000
+      internalID: 2410355698912830675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_12
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 770
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81ccf2692c7c2e70800000000000000
+      internalID: 9091778264950423949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhujiemian2_13
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 770
+        width: 657
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e50aebf4d7fe8710800000000000000
+      internalID: 1697566603696801254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      zhujiemian2_0: 7301850584118223001
+      zhujiemian2_1: -6508979831540526105
+      zhujiemian2_10: -3742777857573247865
+      zhujiemian2_11: 2410355698912830675
+      zhujiemian2_12: 9091778264950423949
+      zhujiemian2_13: 1697566603696801254
+      zhujiemian2_2: 4339354777419525179
+      zhujiemian2_3: 7728638112158866362
+      zhujiemian2_4: -8174927752912899287
+      zhujiemian2_5: 5126460551017297942
+      zhujiemian2_6: 4662587000243960249
+      zhujiemian2_7: -8573937250342349407
+      zhujiemian2_8: 7362684571376395938
+      zhujiemian2_9: -8988400235654338017
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
