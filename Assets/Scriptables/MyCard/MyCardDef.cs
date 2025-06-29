@@ -35,6 +35,7 @@ public class Effect
     public int BuffID;
     public int ItemID;
     public int ToolID;
+    public int SkillID;
     public Effect(Effect effect)
     {
         WorkDelta = effect.WorkDelta;
@@ -44,6 +45,7 @@ public class Effect
         BuffID = effect.BuffID;
         ItemID = effect.ItemID;
         ToolID = effect.ToolID;
+        SkillID = effect.SkillID;
     }
 
     public void PlayEffect()

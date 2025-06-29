@@ -118,7 +118,6 @@ internal class GameManger : MonoBehaviour
                 int previousWork = work;
                 work = Math.Max(value, work);
                 Debug.Log($"Work changed: {work}");
-                WorkChangeEvent.Invoke(this, new WorkChangeEventArgs(previousWork, work));
             }
         }
     }
