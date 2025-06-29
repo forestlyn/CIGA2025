@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TEST.unity
-    guid: 2dcc13622335f5043b8ae16c11b20124
+    path: Assets/Scenes/StartScene.unity
+    guid: 57d61d7f60d4f0940ae5938d7bbd719c
+  - enabled: 1
+    path: Assets/Scenes/CiGATestWithUI.unity
+    guid: 28adb31d7a80a824ea760cc0de0b48ca
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

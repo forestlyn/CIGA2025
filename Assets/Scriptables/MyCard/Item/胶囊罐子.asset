@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef85fdab70899ef489774c4c7da50df5, type: 3}
   m_Name: "\u80F6\u56CA\u7F50\u5B50"
   m_EditorClassIdentifier: 
-  BackArt: {fileID: 6987519897729658085, guid: b5bf0f9023f173745bfa347f19b8ce77, type: 3}
-  Sprite: {fileID: 6987519897729658085, guid: b5bf0f9023f173745bfa347f19b8ce77, type: 3}
+  BackArt: {fileID: 6987519897729658085, guid: 5dae56d9a3444684382467d52ca70bb1, type: 3}
+  Sprite: {fileID: 6987519897729658085, guid: 5dae56d9a3444684382467d52ca70bb1, type: 3}
   CardType: 3
-  CardName: "\u7EB8\u6761\u7F50\u5B50"
+  CardName: "\u80F6\u56CA\u7F50\u5B50"
   CardDescription: "\u4F60\u7684\u624B\u724C\u4E0A\u9650\u6539\u4E3A15"
   Effect:
     WorkDelta: 0
