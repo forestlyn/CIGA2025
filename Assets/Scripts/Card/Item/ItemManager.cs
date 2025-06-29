@@ -20,7 +20,8 @@ internal class ItemManager : MonoBehaviour
             return _instance;
         }
     }
-
+    [SerializeField]
+    private List<GameObject> itemGOs = new List<GameObject>();
     [SerializeField]
     private List<Item> itemList = new List<Item>();
 
@@ -29,11 +30,11 @@ internal class ItemManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Debug.LogError("ItemManager instance already exists. Destroying duplicate.");
         }
     }
 
@@ -47,8 +48,15 @@ internal class ItemManager : MonoBehaviour
         return itemList.Count < GameManger.Instance.MaxItemCount;
     }
 
-    internal Item GetItem(int itemID)
+    internal GameObject GetItemGO(int itemID)
     {
+        foreach (var item in itemGOs)
+        {
+            if (item.GetComponent<Item>().ItemID == itemID)
+            {
+                return item;
+            }
+        }
         return null;
     }
 
@@ -59,6 +67,8 @@ internal class ItemManager : MonoBehaviour
             itemList.Add(item);
             item.gameObject.SetActive(true);
             item.Active();
+            if (!HasRoom())
+                UIManager.Instance.ShowThought("...已经思考得太多了", 2f);
         }
         else
         {

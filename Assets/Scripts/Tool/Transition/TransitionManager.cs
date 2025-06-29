@@ -39,6 +39,7 @@ public class TransitionManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -50,6 +51,7 @@ public class TransitionManager : MonoBehaviour
     {
         if (!isLoading)
         {
+            //Debug.LogError($"Transitioning from {from} to {to}");
             StartCoroutine(TransitionToScene(from, to));
         }
     }
@@ -63,7 +65,7 @@ public class TransitionManager : MonoBehaviour
             OnStartLoadSceneEvent?.Invoke(this, new TransitionEventArgs(from, to));
             yield return SceneManager.UnloadSceneAsync(from);
         }
-        yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync(to, LoadSceneMode.Single);
         Scene newScene = SceneManager.GetSceneAt(SceneManager.sceneCount - 1);
         SceneManager.SetActiveScene(newScene);
         OnAfterLoadSceneEvent?.Invoke(this, new TransitionEventArgs(from, to));
@@ -74,15 +76,19 @@ public class TransitionManager : MonoBehaviour
     private IEnumerator Fade(float targetAlpha)
     {
         isFade = true;
-        fadeCanvasGroup.blocksRaycasts = true;
-        float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / fadeDuration;
-        while (!Mathf.Approximately(fadeCanvasGroup.alpha, targetAlpha))
+        if (fadeCanvasGroup != null)
         {
-            fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * Time.deltaTime);
-            yield return null;
-        }
+            fadeCanvasGroup.blocksRaycasts = true;
+            float speed = Mathf.Abs(fadeCanvasGroup.alpha - targetAlpha) / fadeDuration;
+            while (!Mathf.Approximately(fadeCanvasGroup.alpha, targetAlpha))
+            {
+                fadeCanvasGroup.alpha = Mathf.MoveTowards(fadeCanvasGroup.alpha, targetAlpha, speed * Time.deltaTime);
+                yield return null;
+            }
 
-        fadeCanvasGroup.blocksRaycasts = false;
+            fadeCanvasGroup.blocksRaycasts = false;
+        }
         isFade = false;
+        yield return null;
     }
 }

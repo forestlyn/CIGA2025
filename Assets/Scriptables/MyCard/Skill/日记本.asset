@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef85fdab70899ef489774c4c7da50df5, type: 3}
   m_Name: "\u65E5\u8BB0\u672C"
   m_EditorClassIdentifier: 
-  BackArt: {fileID: -2871850626999381255, guid: 1362b9e6c4d740047884935794b289a4, type: 3}
-  Sprite: {fileID: -2871850626999381255, guid: 1362b9e6c4d740047884935794b289a4, type: 3}
+  BackArt: {fileID: -2871850626999381255, guid: f068feaec8f6c5848aa222c5365acaf0, type: 3}
+  Sprite: {fileID: -2871850626999381255, guid: f068feaec8f6c5848aa222c5365acaf0, type: 3}
   CardType: 1
   CardName: "\u65E5\u8BB0\u672C"
   CardDescription: "\u65E5\u8BB0\u672C"
@@ -23,6 +23,9 @@ MonoBehaviour:
     TirednessDelta: 0
     DrawCardCount: 0
     BuffID: -1
+    ItemID: 0
+    ToolID: 0
+    SkillID: 1
   UseTimes: 0
   listOfCosts:
   - CurrencyType: {fileID: 11400000, guid: 01683e792cc157a4fa4f261f21c82857, type: 2}

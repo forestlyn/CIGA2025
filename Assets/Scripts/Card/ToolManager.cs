@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 
-internal class ToolManager
+internal class ToolManager : MonoBehaviour
 {
     private static ToolManager _instance;
     public static ToolManager Instance
@@ -24,43 +24,70 @@ internal class ToolManager
         }
     }
 
-    public ToolManager()
+    void Awake()
     {
-        _instance = this;
+        if (_instance == null)
+        {
+            _instance = this;
+            Init();
+        }
+        else if (_instance != this)
+        {
+            Debug.LogError("ToolManager instance already exists. Destroying duplicate.");
+        }
     }
-    Dictionary<int, GameObject> toolPrefabs = new Dictionary<int, GameObject>();
+
+    [SerializeField]
+    List<GameObject> toolGOs = new List<GameObject>();
 
     List<Tool> tools = new List<Tool>();
 
     public void Init()
     {
-        toolPrefabs.Add(0, Resources.Load<GameObject>("Tools/Tool"));
+        //toolGOs.Add(0, Resources.Load<GameObject>("Tools/Tool"));
     }
 
-    internal bool CreateTool(int v, PlayerCard playerCard)
+    public bool HasTool(int v)
+    {
+        return tools.Any(t => t.ToolID == v);
+    }
+
+    internal bool CreateTool(int v,PlayerCard playerCard)
     {
         if (!HasRoom())
         {
             return false;
         }
-        toolPrefabs.TryGetValue(v, out GameObject toolPrefab);
-        if (toolPrefab == null)
+        if (HasTool(v))
+        {
+            Debug.LogWarning($"Tool with ID {v} already exists.");
+            return false;
+        }
+        GameObject toolGo = toolGOs.FirstOrDefault(go => go.GetComponent<Tool>().ToolID == v);
+        if (toolGo == null)
         {
             Debug.LogError($"Tool prefab with ID {v} not found.");
             return false;
         }
-        GameObject toolInstance = UnityEngine.Object.Instantiate(toolPrefab);
-        Tool tool = toolInstance.GetComponent<Tool>();
+        Debug.Log($"Creating tool with ID {v} from prefab {toolGo.name}.");
+        toolGo.SetActive(true);
+        Tool tool = toolGo.GetComponent<Tool>();
         tool.playerCard = playerCard;
         tools.Add(tool);
+        tool.IsActive = true;
         GameManger.Instance.RemoveCard(playerCard.GetComponent<Card>());
-
+        if (!HasRoom())
+        {
+            UIManager.Instance.ShowThought("...已经思考得太多了", 2f);
+        }
         return true;
     }
 
     internal void RemoveTool(Tool tool)
     {
         tools.Remove(tool);
+        tool.IsActive = false; 
+        tool.gameObject.SetActive(false);
     }
 
     internal bool HasRoom()

@@ -1,18 +1,32 @@
 using CardHouse;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class Tool : MonoBehaviour
 {
+    public int ToolID;
     public PlayerCard playerCard;
     bool isFocused;
 
     public float MoveSpeed = 1f;
     private Vector3 targetPos;
 
+    private bool isActive;
+    public bool IsActive
+    {
+        get => isActive; 
+        internal set
+        {
+            isActive = value;
+        }
+    }
+
     private void Awake()
     {
         //transform.position = new Vector3(Random.Range(-7, 7), Random.Range(-2.5f, 2.5f), 0);
         //targetPos = RandomTargetPos();
+        IsActive = false;
+        GetComponent<DragDetector>().IsActive = false;
     }
 
     //private Vector3 RandomTargetPos()
@@ -49,18 +63,25 @@ public class Tool : MonoBehaviour
     private void OnMouseEnter()
     {
         isFocused = true;
+        string text = playerCard.GetMyCardData().CardName + ":" + playerCard.GetMyCardData().CardDescription;
+        UIManager.Instance.SetDescriptionText(text);
     }
 
     private void OnMouseDown()
     {
+        if (!isActive)
+        {
+            return;
+        }
         playerCard.ActivateEffect();
         ToolManager.Instance.RemoveTool(this);
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     private void OnMouseExit()
     {
         isFocused = false;
+        UIManager.Instance.SetDescriptionText(string.Empty);
     }
 
 }

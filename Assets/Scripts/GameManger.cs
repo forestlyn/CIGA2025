@@ -33,14 +33,13 @@ internal class GameManger : MonoBehaviour
     private PlayerManager _playerManager;
     private RoundManager _roundManager;
     private BuffManager _buffManager;
-    private ToolManager _toolManager;
+    private ToolManager _toolManager=> ToolManager.Instance;
     private void Awake()
     {
         _instance = this;
         _playerManager = new PlayerManager();
         _roundManager = new RoundManager();
         _buffManager = new BuffManager();
-        _toolManager = new ToolManager();
 
         _roundManager.StartNewRoundEvent += OnRoundStart;
         _roundManager.EndRoundEvent += OnRoundEnd;
@@ -107,6 +106,8 @@ internal class GameManger : MonoBehaviour
     public MyEvent WorkChangeEvent = MyEvent.CreateEvent((int)EventTypeEnum.WorkChange);
     public MyEvent DiscardCardEvent = MyEvent.CreateEvent((int)EventTypeEnum.DiacardCardEvent);
     private int work;
+
+    public int WorkMax { get; private set; } = 100;
     public int Work
     {
         get => work;
@@ -115,9 +116,8 @@ internal class GameManger : MonoBehaviour
             if (work != value)
             {
                 int previousWork = work;
-                work = value;
+                work = Math.Max(value, work);
                 Debug.Log($"Work changed: {work}");
-                WorkChangeEvent.Invoke(this, new WorkChangeEventArgs(previousWork, work));
             }
         }
     }

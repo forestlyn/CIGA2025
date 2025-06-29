@@ -26,7 +26,7 @@ public class PlayerCard : MonoBehaviour
 
     private void OnBuffChange(object sender, EventArgs e)
     {
-        Debug.Log($"Buff change detected for CardId: {myCardData.CardName}");
+        //Debug.Log($"Buff change detected for CardId: {myCardData.CardName}");
         var tempCardData = BuffManager.Instance.CalculateBuff(myCardData);
         GetComponent<MyCardSetup>().ReDraw(tempCardData);
         GetComponent<CurrencyCost>().UpdateCost(tempCardData);
@@ -34,13 +34,15 @@ public class PlayerCard : MonoBehaviour
 
     public void Activate()
     {
+        UIManager.Instance.SetDescriptionText(myCardData.CardDescription);
         if (myCardData.CardType == MyCardDefType.Skill)
         {
             ActivateEffect();
+            SkillManager.Instance.ActiveSkillGo(myCardData.SkillID);
         }
         else if (myCardData.CardType == MyCardDefType.Prop)
         {
-            ToolManager.Instance.CreateTool(0, this);            
+            ToolManager.Instance.CreateTool(myCardData.ToolID, this);
         }
         else if (myCardData.CardType == MyCardDefType.Item)
         {
@@ -66,7 +68,7 @@ public class PlayerCard : MonoBehaviour
             MyLog.LogWithTime($"Card play effect. {GameManger.Instance.StateType}");
             var nowCardData = CalculateMyCardData();
             BuffManager.Instance.PlayCard(myCardData);
-            nowCardData.Effect.PlayEffect();
+            nowCardData.Effect.PlayEffect(myCardData);
             PlayerManager.Instance.PlayCardEvent.Invoke(this, new EventPlayCardArgs(nowCardData));
             //Debug.Log($"Card {myCardData.CardName} activated with effect: {nowEffect.WorkDelta} Work, {nowEffect.TirednessDelta} Tiredness, Draw {nowEffect.DrawCardCount} Cards, Buff ID: {nowEffect.BuffID}");
         }
