@@ -26,7 +26,7 @@ public class PlayerCard : MonoBehaviour
 
     private void OnBuffChange(object sender, EventArgs e)
     {
-        Debug.Log($"Buff change detected for CardId: {myCardData.CardName}");
+        //Debug.Log($"Buff change detected for CardId: {myCardData.CardName}");
         var tempCardData = BuffManager.Instance.CalculateBuff(myCardData);
         GetComponent<MyCardSetup>().ReDraw(tempCardData);
         GetComponent<CurrencyCost>().UpdateCost(tempCardData);
@@ -40,7 +40,7 @@ public class PlayerCard : MonoBehaviour
         }
         else if (myCardData.CardType == MyCardDefType.Prop)
         {
-            ToolManager.Instance.CreateTool(0, this);            
+            ToolManager.Instance.CreateTool(myCardData.ToolID, this);
         }
         else if (myCardData.CardType == MyCardDefType.Item)
         {

@@ -12,7 +12,9 @@ public class ToolGate : Gate<NoParams>
 
     protected override bool IsUnlockedInternal(NoParams argObject)
     {
-        if (playerCard.GetMyCardData().CardType == MyCardDefType.Prop && !ToolManager.Instance.HasRoom())
+        if (playerCard.GetMyCardData().CardType == MyCardDefType.Prop 
+            && !ToolManager.Instance.HasRoom()
+            &&ToolManager.Instance.HasTool(playerCard.GetMyCardData().ToolID))
         {
             return false;
         }

@@ -2,7 +2,6 @@ using CardHouse;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.LightTransport;
 
 public enum MyCardDefType
 {
@@ -35,6 +34,7 @@ public class Effect
 
     public int BuffID;
     public int ItemID;
+    public int ToolID;
     public Effect(Effect effect)
     {
         WorkDelta = effect.WorkDelta;
@@ -43,6 +43,7 @@ public class Effect
         DrawCardCount = effect.DrawCardCount;
         BuffID = effect.BuffID;
         ItemID = effect.ItemID;
+        ToolID = effect.ToolID;
     }
 
     public void PlayEffect()
@@ -70,10 +71,11 @@ public class Effect
         }
         if (ItemID != -1)
         {
-            Item item = ItemManager.Instance.GetItem(ItemID);
+            var item = ItemManager.Instance.GetItemGO(ItemID);
             if (item != null)
             {
-                ItemManager.Instance.AddItem(item);
+                item.SetActive(true);
+                ItemManager.Instance.AddItem(item.GetComponent<Item>());
             }
         }
     }
