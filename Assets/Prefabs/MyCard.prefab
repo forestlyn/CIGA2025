@@ -432,7 +432,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_Sprite: {fileID: -2871850626999381255, guid: 1362b9e6c4d740047884935794b289a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 5333308610527672187}
   - component: {fileID: 7347350938289385265}
   - component: {fileID: 5397971063960752073}
+  - component: {fileID: -2656982838232113997}
   m_Layer: 0
   m_Name: MyCard
   m_TagString: Untagged
@@ -684,6 +685,7 @@ MonoBehaviour:
     Gates:
     - {fileID: 9213265422537435461}
     - {fileID: 5397971063960752073}
+    - {fileID: -2656982838232113997}
   OnDragStart:
     m_PersistentCalls:
       m_Calls:
@@ -963,6 +965,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 1
+--- !u!114 &-2656982838232113997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2346451397036769865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72663de34557bb459ec0403a0775e02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsActive: 1
 --- !u!1 &2839210322157631099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1160,7 +1175,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!114 &6335704366024756371
 MonoBehaviour:

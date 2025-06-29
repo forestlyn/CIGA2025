@@ -6,6 +6,7 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI cardInitCountText;
     public TextMeshProUGUI cardDiscardCountText;
+    public TextMeshProUGUI descriptionText;
     public PointUI pointUI;
     private static UIManager _instance;
     public static UIManager Instance
@@ -38,4 +39,10 @@ public class UIManager : MonoBehaviour
         cardInitCountText.text = GameManger.Instance.CardInit.MountedCards.Count.ToString();
         cardDiscardCountText.text = GameManger.Instance.CardDiacrd.MountedCards.Count.ToString();
     }
+
+    public void SetDescriptionText(string text)
+    {
+        descriptionText.text = text;
+    }
+
 }

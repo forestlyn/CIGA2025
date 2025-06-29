@@ -16,7 +16,7 @@ MonoBehaviour:
   Sprite: {fileID: 2514675149350004814, guid: f40009c5b234e3a41a3c449ec162a5f9, type: 3}
   CardType: 3
   CardName: "\u672A\u62C6\u5C01\u7684\u684C\u6E38\u76D2\u5B50"
-  CardDescription: "\u672A\u62C6\u5C01\u7684\u684C\u6E38\u76D2\u5B50"
+  CardDescription: "\u6BCF\u4E2A\u56DE\u5408\u7ED3\u675F\u65F6\uFF0C\u589E\u52A05\u5757\u788E\u7247"
   Effect:
     WorkDelta: 0
     AddTirednessDelta: 0
