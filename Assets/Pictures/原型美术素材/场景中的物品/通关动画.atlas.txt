@@ -1,0 +1,17 @@
+通关动画.png
+size:584,651
+filter:Linear,Linear
+pma:true
+图层 42
+bounds:2,237,412,362
+offsets:1,1,414,364
+rotate:90
+图层 43
+bounds:2,2,313,233
+offsets:1,1,315,235
+图层 44
+bounds:317,4,262,231
+offsets:1,1,264,233
+图层 45
+bounds:366,394,216,255
+offsets:1,1,218,257
