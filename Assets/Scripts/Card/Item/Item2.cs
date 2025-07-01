@@ -1,9 +1,5 @@
-﻿using MyTools.MyEventSystem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using UnityEngine;
 
 /// <summary>
 /// 每次增加疲劳值后，疲劳值降低1
@@ -21,9 +17,11 @@ internal class Item2 : Item
     {
         if (e is EventTirednessChangeArgs tirednessChangeArgs)
         {
+            Debug.Log($"Tiredness change detected: {tirednessChangeArgs.TirednessChange}");
             if (tirednessChangeArgs.TirednessChange > 0)
             {
-                PlayerManager.Instance.PlayerTiredness = Math.Max(0, PlayerManager.Instance.PlayerTiredness + 1);
+                Debug.Log($"Reducing PlayerTiredness by 1 due to Item2 effect. Current Tiredness: {PlayerManager.Instance.PlayerTiredness}");
+                PlayerManager.Instance.PlayerTiredness = Math.Max(0, PlayerManager.Instance.PlayerTiredness - 1);
             }
         }
     }

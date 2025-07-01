@@ -1569,7 +1569,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RunOnStart: 1
   CardPrefab: {fileID: 2346451397036769865, guid: 248f220a146e34d4cacb721e8732ed6e, type: 3}
-  DeckDefinition: {fileID: 11400000, guid: 01173b8680673cc4d949503a27987ec5, type: 2}
+  DeckDefinition: {fileID: 11400000, guid: e6efd2cb61ccdcb45be62b1c2db7eec3, type: 2}
   Deck: {fileID: 1904048329}
   OnSetupCompleteEventChain: []
 --- !u!114 &1060353886

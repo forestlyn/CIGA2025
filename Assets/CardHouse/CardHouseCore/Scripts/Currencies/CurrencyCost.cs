@@ -59,7 +59,10 @@ namespace CardHouse
             foreach (var resource in Cost)
             {
                 Debug.Log(resource.Cost.CurrencyType.Name + " change " + resource.Cost.Amount);
-                CurrencyRegistry.Instance.AdjustCurrency(resource.Cost.CurrencyType.Name, PhaseManager.Instance.PlayerIndex, -1 * resource.Cost.Amount);
+                if (resource.Cost.CurrencyType.Name == "Tired")
+                {
+                    PlayerManager.Instance.PlayerTiredness += resource.Cost.Amount;
+                }
             }
         }
     }

@@ -12,7 +12,7 @@ public class EventTirednessChangeArgs : EventArgs
     public int TirednessChange { get; private set; }
     public EventTirednessChangeArgs(int originalTiredness, int newTiredness)
     {
-        TirednessChange = originalTiredness - newTiredness;
+        TirednessChange = newTiredness - originalTiredness;
         OriginalTiredness = originalTiredness;
         NewTiredness = newTiredness;
     }
@@ -57,18 +57,23 @@ internal class PlayerManager
         }
     }
 
+    private int _PlayerTiredness = 0;
+    /// <summary>
+    /// 这个疲劳值实际上是相反的，从满值100开始减少，0时游戏结束。
+    /// </summary>
     public int PlayerTiredness
     {
-        get => (int)CurrencyRegistry.Instance.GetCurrency(PlayerTirednessCurrencyType, PhaseManager.Instance.PlayerIndex);
+        get => _PlayerTiredness;
         set
         {
             UnityEngine.Debug.Log($"Setting PlayerTiredness: {value} delta:{value - PlayerTiredness}");
             if (PlayerTiredness != value)
             {
                 var previousTiredness = PlayerTiredness;
-                CurrencyRegistry.Instance.AdjustCurrency(PlayerTirednessCurrencyType, PhaseManager.Instance.PlayerIndex, value - PlayerTiredness);
+                CurrencyRegistry.Instance.AdjustCurrency(PlayerTirednessCurrencyType, PhaseManager.Instance.PlayerIndex, PlayerTiredness - value);
+                _PlayerTiredness = value;
                 TirednessChange.Invoke(this, new EventTirednessChangeArgs(previousTiredness, PlayerTiredness));
-                if (value <= 0)
+                if (PlayerTiredness >= PlayerTirednessMax)
                 {
                     TransitionManager.Instance.Win = false;
                     TransitionManager.Instance.Transition("CiGATestWithUI", "End");
@@ -94,21 +99,5 @@ internal class PlayerManager
     {
         PlayerTiredness = playerTiredness;
         PlayerTirednessMax = playerTirednessMax;
-    }
-
-    internal void ChangePlayerTiredness(int tirednessChange)
-    {
-        if (PlayerTiredness + tirednessChange < 0)
-        {
-            PlayerTiredness = 0;
-        }
-        else if (PlayerTiredness + tirednessChange > PlayerTirednessMax)
-        {
-            PlayerTiredness = PlayerTirednessMax;
-        }
-        else
-        {
-            PlayerTiredness += tirednessChange;
-        }
     }
 }

@@ -73,7 +73,7 @@ public class Tool : MonoBehaviour
         {
             return;
         }
-        playerCard.ActivateEffect();
+        playerCard.ApplyEffect();
         ToolManager.Instance.RemoveTool(this);
         //Destroy(gameObject);
     }

@@ -33,7 +33,7 @@ internal class GameManger : MonoBehaviour
     private PlayerManager _playerManager;
     private RoundManager _roundManager;
     private BuffManager _buffManager;
-    private ToolManager _toolManager=> ToolManager.Instance;
+    private ToolManager _toolManager => ToolManager.Instance;
     private void Awake()
     {
         _instance = this;
@@ -53,7 +53,7 @@ internal class GameManger : MonoBehaviour
     {
         //Debug.Log("11");
         Debug.Log($"Round started. Current round: {_roundManager.GetCurrentRound()}");
-        _playerManager.ChangePlayerTiredness(-5);
+        _playerManager.PlayerTiredness += 5;
         DrawCard(5);
     }
     private void OnRoundEnd(object sender, EventArgs e)
@@ -90,7 +90,7 @@ internal class GameManger : MonoBehaviour
     IEnumerator DelayInit()
     {
         yield return new WaitForEndOfFrame();
-        _playerManager.Init(100, 100);
+        _playerManager.Init(0, 100);
         _roundManager.Init();
         _buffManager.Init();
         _toolManager.Init();
@@ -117,7 +117,7 @@ internal class GameManger : MonoBehaviour
             {
                 int previousWork = work;
                 work = Math.Max(value, work);
-                if(work >= WorkMax)
+                if (work >= WorkMax)
                 {
                     work = WorkMax;
                     TransitionManager.Instance.Win = true;

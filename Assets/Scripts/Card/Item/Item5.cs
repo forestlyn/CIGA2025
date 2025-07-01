@@ -17,7 +17,7 @@ internal class Item5 : Item
         {
             foreach (var cost in playCardArgs.Card.listOfCosts)
             {
-                Debug.Log($"{cost.CurrencyType.Name}:{cost.Amount}");
+                //Debug.Log($"{cost.CurrencyType.Name}:{cost.Amount}");
                 if (cost.CurrencyType.Name == "Tired" && cost.Amount == 0)
                 {
                     GameManger.Instance.AddWork(5);

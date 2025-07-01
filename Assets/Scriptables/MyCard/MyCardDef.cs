@@ -57,8 +57,8 @@ public class Effect
         }
         if (TirednessDelta != 0)
         {
-            int flag = AddTirednessDelta ? -1 : 1;
-            PlayerManager.Instance.ChangePlayerTiredness(flag * TirednessDelta);
+            int flag = AddTirednessDelta ? 1 : -1;
+            PlayerManager.Instance.PlayerTiredness += TirednessDelta * flag;
         }
         if (DrawCardCount > 0)
         {
