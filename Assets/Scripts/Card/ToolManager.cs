@@ -75,7 +75,6 @@ internal class ToolManager : MonoBehaviour
         tool.playerCard = playerCard;
         tools.Add(tool);
         tool.IsActive = true;
-        GameManger.Instance.RemoveCard(playerCard.GetComponent<Card>());
         if (!HasRoom())
         {
             UIManager.Instance.ShowThought("...已经思考得太多了", 2f);

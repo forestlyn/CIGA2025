@@ -38,16 +38,21 @@ public class PlayerCard : MonoBehaviour
 
         if (myCardData.CardType == MyCardDefType.Skill)
         {
+            ApplyCost();
             ActivateEffect();
             SkillManager.Instance.ActiveSkillGo(myCardData.SkillID);
         }
         else if (myCardData.CardType == MyCardDefType.Prop)
         {
+            ApplyCost();
             ToolManager.Instance.CreateTool(myCardData.ToolID, this);
+            GameManger.Instance.RemoveCard(GetComponent<Card>());
         }
         else if (myCardData.CardType == MyCardDefType.Item)
         {
+            ApplyCost();
             ActivateEffect();
+            GameManger.Instance.RemoveCard(GetComponent<Card>());
         }
         else
         {
@@ -55,9 +60,15 @@ public class PlayerCard : MonoBehaviour
         }
     }
 
+
+    public void ApplyCost()
+    {
+        GetComponent<CurrencyCost>().Activate();
+    }
+
     public void ActivateEffect()
     {
-        Debug.Log($"Activating CardId: {myCardData.CardName}");
+        //Debug.Log($"Activating CardId: {myCardData.CardName}");
         if (myCardData == null)
         {
             Debug.LogError("MyCardDef is not set for PlayerCard.");
@@ -69,11 +80,15 @@ public class PlayerCard : MonoBehaviour
             MyLog.LogWithTime($"Card play effect. {GameManger.Instance.StateType}");
             var nowCardData = CalculateMyCardData();
             BuffManager.Instance.PlayCard(myCardData);
-            nowCardData.Effect.PlayEffect(myCardData);
             PlayerManager.Instance.PlayCardEvent.Invoke(this, new EventPlayCardArgs(nowCardData));
-            //Debug.Log($"Card {myCardData.CardName} activated with effect: {nowEffect.WorkDelta} Work, {nowEffect.TirednessDelta} Tiredness, Draw {nowEffect.DrawCardCount} Cards, Buff ID: {nowEffect.BuffID}");
+            nowCardData.Effect.PlayEffect(myCardData);
+            Debug.Log($"Card {nowCardData.CardName} activated with effect: {nowCardData.Effect.WorkDelta} Work, " +
+                $"{nowCardData.Effect.TirednessDelta} Tiredness, Draw {nowCardData.Effect.DrawCardCount} Cards, Buff ID: {nowCardData.Effect.BuffID} " +
+                $"{nowCardData.listOfCosts[0].CurrencyType.Name} {nowCardData.listOfCosts[0].Amount}");
         }
     }
+
+
 
     /// <summary>
     /// 计算当前卡牌在当前buff下的效果

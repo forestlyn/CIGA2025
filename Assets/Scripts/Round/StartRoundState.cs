@@ -37,7 +37,7 @@ namespace Assets.Scripts.Round
             base.OnEnter(enumIndex);
             RoundManager.Instance.CurrentRound++;
             RoundManager.Instance.StartNewRoundEvent.Invoke(this, new EventArgs());
-            Debug.Log($"Round {RoundManager.Instance.CurrentRound} started.");
+            //Debug.Log($"Round {RoundManager.Instance.CurrentRound} started.");
         }
 
         protected internal override void OnExit(int enumIndex)

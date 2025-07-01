@@ -100,6 +100,7 @@ internal class BuffManager
             Debug.LogError("MyCardDef is null in BuffManager.PlayCard.");
             return;
         }
+        Debug.Log($"before {myCardData.CardId} applying buffs. now buff:{_buffs.Count}");
         foreach (var buff in _buffs.ToArray())
         {
             if (buff.CheckCondition(myCardData))
@@ -108,6 +109,7 @@ internal class BuffManager
                 buff.Apply(myCardData);
             }
         }
+        Debug.Log($"after {myCardData.CardId} applying buffs. now buff:{_buffs.Count}");
     }
 }
 

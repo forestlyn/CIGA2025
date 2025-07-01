@@ -35,6 +35,7 @@ namespace CardHouse
                 {
                     if (resource.CurrencyType.Name == cost.Cost.CurrencyType.Name)
                     {
+                        Debug.Log($"Updating cost for {cost.Cost.CurrencyType.Name} to {resource.Amount} for CardId: {gameObject.name}");
                         cost.Cost.Amount = resource.Amount;
                         break;
                     }
@@ -52,7 +53,7 @@ namespace CardHouse
             Debug.Log("Activating CurrencyCost for PlayerCard: " + gameObject.name);
             if (Cost == null || Cost.Count == 0)
             {
-                Debug.LogWarning("No costs defined for CurrencyCost.");
+                //Debug.LogWarning("No costs defined for CurrencyCost.");
                 return;
             }
             foreach (var resource in Cost)

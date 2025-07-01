@@ -1,4 +1,5 @@
 using Assets.Scripts;
+using CardHouse;
 using System;
 using System.ComponentModel.Design;
 using UnityEngine;
@@ -7,6 +8,7 @@ public abstract class Item : MonoBehaviour
 {
     public int ItemID;
     public string text;
+    public Card card;
     public abstract void Active();
 
     public abstract void InActive();
