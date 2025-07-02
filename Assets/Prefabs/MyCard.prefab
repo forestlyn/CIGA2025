@@ -484,7 +484,6 @@ GameObject:
   - component: {fileID: 9213265422537435461}
   - component: {fileID: 4480463945754806824}
   - component: {fileID: -8919453373641051202}
-  - component: {fileID: 5333308610527672187}
   - component: {fileID: 7347350938289385265}
   - component: {fileID: 5397971063960752073}
   - component: {fileID: -2656982838232113997}
@@ -655,19 +654,7 @@ MonoBehaviour:
       m_Calls: []
   OnPlay:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5333308610527672187}
-        m_TargetAssemblyTypeName: CardHouse.Activatable, Assembly-CSharp
-        m_MethodName: Activate
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &7448226786766905881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,20 +881,6 @@ MonoBehaviour:
   costText: {fileID: 5974853216549424459}
   PlayerCard: {fileID: 0}
   CardId: 0
---- !u!114 &5333308610527672187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2346451397036769865}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95c96a97b6e17d141ac6955fc92b0826, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MyCard: {fileID: 1550355134810422520}
-  Responses: []
 --- !u!114 &7347350938289385265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1143,7 +1116,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &6335704366024756371
 MonoBehaviour:

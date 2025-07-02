@@ -34,6 +34,7 @@ public class PlayerCard : MonoBehaviour
         var tempCardData = BuffManager.Instance.CalculateBuff(myCardData);
         GetComponent<MyCardSetup>().ReDraw(tempCardData);
         GetComponent<CurrencyCost>().UpdateCost(tempCardData);
+        GetComponent<DragGateDimmer>().UpdateHandler();
     }
 
     public void Activate()

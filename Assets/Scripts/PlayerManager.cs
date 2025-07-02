@@ -4,6 +4,7 @@ using MyTools.MyEventSystem;
 using System;
 using System.Diagnostics;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class EventTirednessChangeArgs : EventArgs
 {
@@ -99,5 +100,7 @@ internal class PlayerManager
     {
         PlayerTiredness = playerTiredness;
         PlayerTirednessMax = playerTirednessMax;
+        CurrencyRegistry.Instance.PlayerWallets[0].Currencies.Find(c => c.CurrencyType.Name == PlayerTirednessCurrencyType)
+                    .Amount = playerTirednessMax;
     }
 }
